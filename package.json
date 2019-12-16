@@ -1,0 +1,22 @@
+{
+  "name": "rs-jwt",
+  "version": "0.1.0",
+  "description": "A really simple JSON Web Token reader.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RobDWaller/rs-jwt.git"
+  },
+  "keywords": [
+    "jwt"
+  ],
+  "author": "Rob Waller",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RobDWaller/rs-jwt/issues"
+  },
+  "homepage": "https://github.com/RobDWaller/rs-jwt#readme"
+}
