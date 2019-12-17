@@ -2,10 +2,10 @@
   "name": "rs-jwt",
   "version": "0.1.0-alpha",
   "description": "A really simple JSON Web Token reader.",
-  "main": "dist/index.js",
-  "types" : "dist/index.d.ts",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha -r ts-node/register ./tests/**/test.**.ts",
     "build": "tsc"
   },
   "repository": {
@@ -22,6 +22,11 @@
   },
   "homepage": "https://github.com/RobDWaller/rs-jwt#readme",
   "devDependencies": {
+    "@types/chai": "^4.2.7",
+    "@types/mocha": "^5.2.7",
+    "chai": "^4.2.0",
+    "mocha": "^6.2.2",
+    "ts-node": "^8.5.4",
     "typescript": "^3.7.3"
   }
 }
