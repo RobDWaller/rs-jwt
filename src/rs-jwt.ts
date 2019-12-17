@@ -1,4 +1,4 @@
-export default class RSJwt {
+export class RSJwt {
   getPayload(): string {
     return 'Hello World';
   }
