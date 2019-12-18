@@ -4,6 +4,7 @@
   "description": "A really simple JSON Web Token reader.",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "files": ["./dist/**/*"],
   "scripts": {
     "test": "mocha -r ts-node/register ./tests/**/test.**.ts",
     "build": "tsc"
