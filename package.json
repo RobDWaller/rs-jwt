@@ -1,10 +1,12 @@
 {
   "name": "rs-jwt",
-  "version": "0.1.0-alpha.1",
+  "version": "0.1.0-alpha.2",
   "description": "A really simple JSON Web Token reader.",
   "main": "dist/rs-jwt.js",
   "types": "dist/rs-jwt.d.ts",
-  "files": ["dist/**/*"],
+  "files": [
+    "dist/**/*"
+  ],
   "scripts": {
     "test": "mocha -r ts-node/register ./tests/**/test.**.ts",
     "build": "tsc"
