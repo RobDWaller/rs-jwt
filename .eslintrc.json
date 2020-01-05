@@ -19,5 +19,14 @@
         "@typescript-eslint"
     ],
     "rules": {
+        "no-console": "error",
+        "complexity": ["error", { "max": 5 }],
+        "no-eval": "error",
+        "no-else-return": "error",
+        "camelcase": "error",
+        "max-depth": ["error", { "max": 3 }],
+        "max-len": ["error", { "code": 120 }],
+        "max-lines": ["error", { "max": 300 }],
+        "max-lines-per-function": ["error", { "max": 30 }]
     }
 }
