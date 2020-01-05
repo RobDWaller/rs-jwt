@@ -9,3 +9,7 @@ script:
   - npm run build
   - npm run test
   - npm run analyse
+  - npm run report
+
+after_success:
+  - npm run codecov
