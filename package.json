@@ -9,7 +9,8 @@
   ],
   "scripts": {
     "test": "mocha -r ts-node/register ./tests/**/test.**.ts",
-    "build": "tsc"
+    "build": "tsc",
+    "analyse": "eslint ./src/** ./tests/**"
   },
   "repository": {
     "type": "git",
@@ -27,7 +28,15 @@
   "devDependencies": {
     "@types/chai": "^4.2.7",
     "@types/mocha": "^5.2.7",
+    "@typescript-eslint/eslint-plugin": "^2.14.0",
+    "@typescript-eslint/parser": "^2.14.0",
     "chai": "^4.2.0",
+    "eslint": "^6.8.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
     "mocha": "^6.2.2",
     "ts-node": "^8.5.4",
     "typescript": "^3.7.3"
