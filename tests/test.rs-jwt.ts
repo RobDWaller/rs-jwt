@@ -1,5 +1,6 @@
 import { RSJwt } from '../src/rs-jwt';
-import { expect } from 'chai';
+import { expect, assert } from 'chai';
+import {SplitToken} from '../src/split-token';
 import 'mocha';
 
 describe('Really Simple JWT', () => {
@@ -12,13 +13,11 @@ describe('Really Simple JWT', () => {
     expect(result).to.equal('Hello World');
   });
 
-  it('Should split a JWT and return the three parts.', () => {
+  it('Should split a JWT and return a SplitToken object.', () => {
     let jwt = new RSJwt();
 
     let result = jwt.splitToken('abc.def.hij');
 
-    expect(result.header).to.equal('abc');
-    expect(result.payload).to.equal('def');
-    expect(result.signature).to.equal('hij');
+    assert.instanceOf(result, SplitToken);
   });
 });

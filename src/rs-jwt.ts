@@ -1,15 +1,13 @@
+import {SplitToken} from './split-token';
+
 export class RSJwt {
   getPayload(): string {
     return 'Hello World';
   }
 
-  splitToken(token: string) {
+  splitToken(token: string): SplitToken {
     let parts = token.split(".");
 
-    return {
-      header: parts[0],
-      payload: parts[1],
-      signature: parts[2]
-    }
+    return new SplitToken(parts[0], parts[1], parts[2]);
   }
 }
