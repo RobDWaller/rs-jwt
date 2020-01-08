@@ -10,6 +10,7 @@ script:
   - npm run test
   - npm run analyse
   - npm run report
+  - npx stryker run
 
 after_success:
   - npm run codecov
