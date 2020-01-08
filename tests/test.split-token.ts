@@ -1,5 +1,5 @@
 import { SplitToken } from '../src/split-token'
-import { assert } from 'chai'
+import { assert, expect } from 'chai'
 import { describe, it } from 'mocha'
 
 describe('Split Token Class', () => {
@@ -13,5 +13,13 @@ describe('Split Token Class', () => {
     const token = new SplitToken('abc', 'def', null)
 
     assert.instanceOf(token, SplitToken, 'token is an instance of SplitToken')
+  })
+
+  it ('Should set the header, payload and signature and return the data via getters', () => {
+    const token = new SplitToken('abc', 'def', 'hij')
+
+    expect(token.getHeader()).to.equal('abc');
+    expect(token.getPayload()).to.equal('def');
+    expect(token.getSignature()).to.equal('hij');
   })
 })
