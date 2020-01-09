@@ -1,9 +1,16 @@
 import { Base64 } from 'js-base64';
 import { SplitToken } from './split-token'
+import { Jwt } from './jwt'
 
 export class RSJwt {
-  getPayload (): string {
-    return 'Hello World'
+  parse (token: string): Jwt {
+    const split = this.splitToken(token)
+
+    return new Jwt(
+      this.decode(split.getHeader()),
+      this.decode(split.getPayload()),
+      split.getSignature()
+    )
   }
 
   splitToken (token: string): SplitToken {

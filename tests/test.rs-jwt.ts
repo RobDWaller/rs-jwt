@@ -1,17 +1,10 @@
 import { RSJwt } from '../src/rs-jwt'
 import { expect, assert } from 'chai'
 import { SplitToken } from '../src/split-token'
+import { Jwt } from '../src/jwt'
 import { describe, it } from 'mocha'
 
 describe('Really Simple JWT', () => {
-  it('Should return a JWT payload object', () => {
-    const jwt = new RSJwt()
-
-    const result = jwt.getPayload()
-
-    expect(result).to.equal('Hello World')
-  })
-
   it('Should split a JWT and return a SplitToken object.', () => {
     const jwt = new RSJwt()
 
@@ -58,5 +51,13 @@ describe('Really Simple JWT', () => {
     const result = jwt.decode('eyJjdHkiOiJKV1QiLCJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9')
 
     expect(result).to.equal('{"cty":"JWT","alg":"HS256","typ":"JWT"}')    
+  })
+
+  it ('Should parse a JWT token string to a JWT Object', () => {
+    const jwt = new RSJwt()
+
+    const result = jwt.parse('eyJjdHkiOiJKV1QiLCJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJmYWtlcnMudGVzdCIsImF1ZCI6Imh0dHA6XC9cL2Zha2Vycy50ZXN0IiwiZXhwIjoxNTc0NjY3OTQ2LCJpYXQiOjE1NzQ2NjcwNDYsInVzZXJfaWQiOiIzMTM4NjE2MiJ9.KqTrVOzyfJoRVUbc41HaVP41e6HTkPeWzg9QP7VrCsk')
+  
+    assert.instanceOf(result, Jwt)
   })
 })
