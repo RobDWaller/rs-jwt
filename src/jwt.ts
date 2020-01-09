@@ -11,7 +11,7 @@ export class Jwt {
     this.signature = signature
   }
 
-  getHeader(): Object {
+  getHeader (): Object {
     return this.header
   }
 

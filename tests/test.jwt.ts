@@ -4,10 +4,10 @@ import { describe, it } from 'mocha'
 
 describe('JWT Object', () => {
   it('Should return a header object', () => {
-    const header = {} 
+    const header = {}
     const payload = {}
     const signature = ''
-    
+
     const jwt = new Jwt(header, payload, signature)
 
     const result = jwt.getHeader()
@@ -16,10 +16,10 @@ describe('JWT Object', () => {
   })
 
   it('Should return a payload object', () => {
-    const header = {} 
+    const header = {}
     const payload = {}
     const signature = ''
-    
+
     const jwt = new Jwt(header, payload, signature)
 
     const result = jwt.getPayload()
@@ -28,10 +28,10 @@ describe('JWT Object', () => {
   })
 
   it('Should return a signature string', () => {
-    const header = {} 
+    const header = {}
     const payload = {}
     const signature = '123'
-    
+
     const jwt = new Jwt(header, payload, signature)
 
     const result = jwt.getSignature()
