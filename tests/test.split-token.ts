@@ -15,11 +15,11 @@ describe('Split Token Class', () => {
     assert.instanceOf(token, SplitToken, 'token is an instance of SplitToken')
   })
 
-  it ('Should set the header, payload and signature and return the data via getters', () => {
+  it('Should set the header, payload and signature and return the data via getters', () => {
     const token = new SplitToken('abc', 'def', 'hij')
 
-    expect(token.getHeader()).to.equal('abc');
-    expect(token.getPayload()).to.equal('def');
-    expect(token.getSignature()).to.equal('hij');
+    expect(token.getHeader()).to.equal('abc')
+    expect(token.getPayload()).to.equal('def')
+    expect(token.getSignature()).to.equal('hij')
   })
 })
