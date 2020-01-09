@@ -51,4 +51,12 @@ describe('Really Simple JWT', () => {
 
     expect(result).to.equal('hello')
   })
+
+  it('Should decode token part to a JSON string.', () => {
+    const jwt = new RSJwt()
+
+    const result = jwt.decode('eyJjdHkiOiJKV1QiLCJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9')
+
+    expect(result).to.equal('{"cty":"JWT","alg":"HS256","typ":"JWT"}')    
+  })
 })

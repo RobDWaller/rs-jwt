@@ -12,6 +12,12 @@ export class RSJwt {
     return new SplitToken(parts[0], parts[1], parts[2])
   }
 
+  decode(base64: string): string {
+    base64 = this.toBase64(base64)
+    base64 = this.addPadding(base64)
+    return this.base64Decode(base64)
+  }
+
   toBase64 (base64Url: string): string {
     return base64Url.replace('-', '+').replace('_', '/')
   }
