@@ -10,4 +10,16 @@ export class RSJwt {
 
     return new SplitToken(parts[0], parts[1], parts[2])
   }
+
+  toBase64 (base64Url: string): string {
+    return base64Url.replace('-', '+').replace('_', '/')
+  }
+
+  addPadding (base64: string): string {
+    if (base64.length % 4 !== 0) {
+      return this.addPadding(base64 + '=')
+    }
+
+    return base64
+  }
 }

@@ -27,4 +27,20 @@ describe('Really Simple JWT', () => {
 
     expect(result.getPayload()).to.equal('def')
   })
+
+  it('Should change Base64Url string to Base64 string', () => {
+    const jwt = new RSJwt()
+
+    const result = jwt.toBase64('a-b_c')
+
+    expect(result).to.equal('a+b/c')
+  })
+
+  it('Should add padding to Base64 string which is not long enough', () => {
+    const jwt = new RSJwt()
+
+    const result = jwt.addPadding('ab')
+
+    expect(result).to.equal('ab==')
+  })
 })
