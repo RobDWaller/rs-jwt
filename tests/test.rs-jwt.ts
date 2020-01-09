@@ -43,4 +43,12 @@ describe('Really Simple JWT', () => {
 
     expect(result).to.equal('ab==')
   })
+
+  it('Should decode a base64 string to a text string', () => {
+    const jwt = new RSJwt()
+
+    const result = jwt.base64Decode('aGVsbG8=')
+
+    expect(result).to.equal('hello')
+  })
 })

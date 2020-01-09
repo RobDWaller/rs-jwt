@@ -1,3 +1,4 @@
+import { Base64 } from 'js-base64';
 import { SplitToken } from './split-token'
 
 export class RSJwt {
@@ -21,5 +22,9 @@ export class RSJwt {
     }
 
     return base64
+  }
+
+  base64Decode(base64: string): string {
+    return Base64.decode(base64)
   }
 }

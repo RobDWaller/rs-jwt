@@ -50,5 +50,9 @@
     "nyc": "^15.0.0",
     "ts-node": "^8.5.4",
     "typescript": "^3.7.4"
+  },
+  "dependencies": {
+    "@types/js-base64": "^2.3.1",
+    "js-base64": "^2.5.1"
   }
 }
