@@ -19,4 +19,12 @@ describe('Really Simple JWT', () => {
 
     assert.instanceOf(result, SplitToken)
   })
+
+  it('Should split a JWT and get payload should be accessible.', () => {
+    const jwt = new RSJwt()
+
+    const result = jwt.splitToken('abc.def.hij')
+
+    expect(result.getPayload()).to.equal('def')
+  })
 })
