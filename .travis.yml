@@ -7,9 +7,8 @@ before_script:
 
 script:
   - npm run build
-  - npm run coverage
   - npm run analyse
-  - npm run report
+  - npm run coverage
   - npx stryker run
 
 after_success:

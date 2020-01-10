@@ -11,8 +11,7 @@
     "test": "mocha ./tests/**/*.ts",
     "build": "tsc",
     "analyse": "eslint ./src/** ./tests/**",
-    "coverage": "nyc --lines 100 npm test",
-    "report": "nyc --reporter=html --reporter=clover npm test",
+    "coverage": "nyc npm test",
     "codecov": "codecov"
   },
   "repository": {
