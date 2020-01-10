@@ -10,7 +10,7 @@
     "declaration": true,
     "outDir": "./dist",
     "types": ["node"],
-    "sourceMap": true
+    "sourceMap": false
   },
   "include": [
     "./src/*.ts",
