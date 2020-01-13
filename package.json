@@ -1,6 +1,6 @@
 {
   "name": "rs-jwt",
-  "version": "0.1.0-beta.1",
+  "version": "0.1.0-beta.2",
   "description": "A really simple JSON Web Token reader.",
   "main": "dist/rs-jwt.js",
   "types": "dist/rs-jwt.d.ts",
