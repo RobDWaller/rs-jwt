@@ -7,8 +7,8 @@ export class RSJwt {
     const split = this.splitToken(token)
 
     return new Jwt(
-      this.decode(split.getHeader()),
-      this.decode(split.getPayload()),
+      JSON.parse(this.decode(split.getHeader())),
+      JSON.parse(this.decode(split.getPayload())),
       split.getSignature()
     )
   }

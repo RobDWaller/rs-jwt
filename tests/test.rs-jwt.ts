@@ -4,16 +4,34 @@ import { SplitToken } from '../src/split-token'
 import { Jwt } from '../src/jwt'
 import { describe, it } from 'mocha'
 
+const jwtTokenString = 'eyJjdHkiOiJKV1QiLCJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.' +
+'eyJpc3MiOiJmYWtlcnMudGVzdCIsImF1ZCI6Imh0dHA6XC9cL2Zha2Vycy50ZXN0IiwiZXhwIjoxNTc' +
+'0NjY3OTQ2LCJpYXQiOjE1NzQ2NjcwNDYsInVzZXJfaWQiOiIzMTM4NjE2MiJ9.KqTrVOzyfJoRVUbc' +
+'41HaVP41e6HTkPeWzg9QP7VrCsk'
+
 describe('Parse JSON Web Token', () => {
   it('Should parse a JWT token string to a JWT Object.', () => {
     const jwt = new RSJwt()
 
-    const result = jwt.parse('eyJjdHkiOiJKV1QiLCJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.' +
-    'eyJpc3MiOiJmYWtlcnMudGVzdCIsImF1ZCI6Imh0dHA6XC9cL2Zha2Vycy50ZXN0IiwiZXhwIjoxNTc' +
-    '0NjY3OTQ2LCJpYXQiOjE1NzQ2NjcwNDYsInVzZXJfaWQiOiIzMTM4NjE2MiJ9.KqTrVOzyfJoRVUbc' +
-    '41HaVP41e6HTkPeWzg9QP7VrCsk')
+    const result = jwt.parse(jwtTokenString)
 
     assert.instanceOf(result, Jwt)
+  })
+
+  it('Should parse a JWT token string to a JWT Object containing a cty header property.', () => {
+    const jwt = new RSJwt()
+
+    const result = jwt.parse(jwtTokenString)
+
+    expect(result.getHeader().cty).to.equal('JWT')
+  })
+
+  it('Should parse a JWT token string to a JWT Object containing a iat payload property.', () => {
+    const jwt = new RSJwt()
+
+    const result = jwt.parse(jwtTokenString)
+
+    expect(result.getPayload().iat).to.equal(1574667046)
   })
 })
 
