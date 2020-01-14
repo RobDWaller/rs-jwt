@@ -12,7 +12,8 @@
     "build": "tsc",
     "analyse": "eslint ./src/** ./tests/**",
     "coverage": "nyc npm test",
-    "codecov": "codecov"
+    "codecov": "codecov",
+    "deploy": "npm run build && npm publish"
   },
   "repository": {
     "type": "git",
