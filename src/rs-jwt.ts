@@ -2,6 +2,12 @@ import { Base64 } from 'js-base64'
 import { SplitToken } from './split-token'
 import { Jwt } from './jwt'
 
+/**
+ * Parse a JSON Web Token to a JavaScript object which allows you to easily 
+ * access claims in the header and payload.
+ * 
+ * @author Rob Waller <rdwaller1984@gmail.com>
+ */
 export class RSJwt {
   parse (token: string): Jwt {
     const split = this.splitToken(token)
