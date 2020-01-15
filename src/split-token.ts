@@ -1,5 +1,5 @@
 /**
- * Wrapper class which contains the header, payload and signature strings once 
+ * Wrapper class which contains the header, payload and signature strings once
  * the JWT token string has been split.
  */
 export class SplitToken {
