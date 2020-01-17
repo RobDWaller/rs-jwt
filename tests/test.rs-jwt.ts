@@ -39,7 +39,7 @@ describe('Split JSON Web Token', () => {
   it('Should split a JWT token string and return a SplitToken object.', () => {
     const jwt = new RSJwt()
 
-    const result = jwt.splitToken('abc.def.hij')
+    const result = jwt['splitToken']('abc.def.hij')
 
     assert.instanceOf(result, SplitToken)
   })
@@ -47,7 +47,7 @@ describe('Split JSON Web Token', () => {
   it('Should split a JWT token string and get payload should be accessible.', () => {
     const jwt = new RSJwt()
 
-    const result = jwt.splitToken('abc.def.hij')
+    const result = jwt['splitToken']('abc.def.hij')
 
     expect(result.getPayload()).to.equal('def')
   })
@@ -57,7 +57,7 @@ describe('Convert Base64URL to Base64', () => {
   it('Should change Base64Url string to Base64 string.', () => {
     const jwt = new RSJwt()
 
-    const result = jwt.toBase64('a-b_c')
+    const result = jwt['toBase64']('a-b_c')
 
     expect(result).to.equal('a+b/c')
   })
@@ -65,7 +65,7 @@ describe('Convert Base64URL to Base64', () => {
   it('Should add padding to Base64 string which is not long enough.', () => {
     const jwt = new RSJwt()
 
-    const result = jwt.addPadding('ab')
+    const result = jwt['addPadding']('ab')
 
     expect(result).to.equal('ab==')
   })
@@ -75,7 +75,7 @@ describe('Convert Base64 to Text', () => {
   it('Should decode a base64 string to a text string.', () => {
     const jwt = new RSJwt()
 
-    const result = jwt.base64Decode('aGVsbG8=')
+    const result = jwt['base64Decode']('aGVsbG8=')
 
     expect(result).to.equal('hello')
   })
@@ -85,7 +85,7 @@ describe('Decode JWT token part', () => {
   it('Should decode token part to a JSON string.', () => {
     const jwt = new RSJwt()
 
-    const result = jwt.decode('eyJjdHkiOiJKV1QiLCJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9')
+    const result = jwt['decode']('eyJjdHkiOiJKV1QiLCJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9')
 
     expect(result).to.equal('{"cty":"JWT","alg":"HS256","typ":"JWT"}')
   })
