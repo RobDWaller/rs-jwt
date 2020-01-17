@@ -1,19 +1,15 @@
 language: node_js
 node_js:
-  - 12
-
+- 12
 before_script:
-  - npm install
-
+- npm install
 script:
-  - npm run build
-  - npm run analyse
-  - npm run coverage
-  - npx stryker run
-
+- npm run build
+- npm run analyse
+- npm run coverage
+- npx stryker run
 after_success:
-  - npm run codecov
-
+- npm run codecov
 env:
   global:
-    secure: hTT61NnqbbGAFIJw9BaBqFg4z1jKqOO/t09BcJiVDbDPGjgW1vuGvOtp++gM/HPBrIvWrlJmVY1QWHLb6/Gyfu9NaBKm0sPUM+TR6nO5yS9o3hE7xqL77bqy3nqQwFVo4FaVgOsD0HnW1VRV6C+gs+5Yw4jplNF2lIFFuOJPmOEs6vJBX0Vs/o1t9aff3yzAEceCf3p6H63VUR3wDE7Gk7veXPfkbF/M3HKw8BOuicjwNAwcJ8wMR8ecnpw18eN2DuXAUM76Ju4wblvJskZXhBsCJKfRidhY0+TFzM3RqLwin1eqS1GbL8WLdyCpOW7mBG3FsmZrWH0aIqnp2O9697ffzpdAtbAT24kNhOrHdrCaGWSI7uOJsINwrkz4mq6o8G4JkrLGTbEPOkFnUZgsVvQ0e4rIRa2/z6PCl0F0d3HaxtIEkik63xt4P6TFvWCumHyWxmwYxgDdfYgMGtbg4gQBk+Wg+eb+wadWj0aRhY/iySI73h+vIoyWmV1jP4tlQnLCdcRIcFnlxQBLXsdfs6LSjoGy8H0tP/p+PIzmK3zNK4SHadCgoI9Il+KC+S5R2Z68vrhb3r03aSReqv/JPJkTQsmgCKewfAI53ycxUWf3gDjP27YQffKOOs5k+azXpBx+rZAYNcilXmXJil3OAK72+bQpfe+hjkUD2I8aqZU=
+  - secure: T03QjwLJnGE7wSeIk0gOg0rt/pGOy0K3ArDLZWVCnPRlHhDHEZiX2zithEl8DcPF4MMgybSFjzmnlBoilZPDsQ3mcWlIiG08uCwROX+X3QE5etuyAO40OXn++z1QFcP0dIxmyZE4iuyTWp21CmuwtBuhhLRuhNgiAUcuKvpCL3orAXsGcCnfW+2e8EkzvN/2lQ6jdf355a8h10DHysGJ3/5OAzobkGdmet8Ai3z9eeybZsCts3fwjxpgvDhvV1ZSasflKkeFY6KIdvvcbReciUUOQA3tl+PrpMsrCO6ddWo94pLZj0oY9lyYIIKaxH7dG1XHeuO8SuDtXX95oaJAgusLuuF4wTA5GciGjxZTclR6v0NvPB/z5f/Fw9Ao1dn9LSqIVmoWndGPYZQXO2U/XOwaRGbnxbuSKBNMQ1rm9H/m0F12tjkQ26L0RwO5VwFTN0jA35Tx9iDiJiX73/eiLQEv+mPEjKhFnYHejzzIZ6MuwWUuHz6VvTLfDhULfIggUZIh/EKgLIHAwNWXTT9NrDIUv+6pJQ/lD2/Qxe8mT//S/gjPH70IVW09HfQDKWtX/h2I+Vk67kPiZSmOoWfq9RJb/Ujq0OHB2k8I5CkDJSzbGyHLxYY6YTSxID90f1RgYzaHM3u/pjRErkBo2IeJ4M5ckZB9K50KCDIuwg//vVk=
