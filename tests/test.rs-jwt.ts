@@ -69,6 +69,14 @@ describe('Convert Base64URL to Base64', () => {
 
     expect(result).to.equal('ab==')
   })
+
+  it('Should not add padding to Base64 string which is long enough.', () => {
+    const jwt = new RSJwt()
+
+    const result = jwt['addPadding']('abcd')
+
+    expect(result).to.equal('abcd')
+  })
 })
 
 describe('Convert Base64 to Text', () => {
