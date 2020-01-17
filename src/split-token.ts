@@ -17,15 +17,15 @@ export class SplitToken {
     this.signature = signature
   }
 
-  getHeader (): string {
+  public getHeader (): string {
     return this.header
   }
 
-  getPayload (): string {
+  public getPayload (): string {
     return this.payload
   }
 
-  getSignature (): string | null {
+  public getSignature (): string | null {
     return this.signature
   }
 }

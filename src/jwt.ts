@@ -15,15 +15,15 @@ export class Jwt {
     this.signature = signature
   }
 
-  getHeader (): any {
+  public getHeader (): any {
     return this.header
   }
 
-  getPayload (): any {
+  public getPayload (): any {
     return this.payload
   }
 
-  getSignature (): string | null {
+  public getSignature (): string | null {
     return this.signature
   }
 }
