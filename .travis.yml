@@ -13,3 +13,7 @@ script:
 
 after_success:
   - npm run codecov
+
+env:
+  global:
+    secure: a969732a-57af-41e5-bc46-1cc5fa6a7151
