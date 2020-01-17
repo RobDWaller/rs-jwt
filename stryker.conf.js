@@ -2,7 +2,7 @@ module.exports = function(config) {
   config.set({
     mutator: "typescript",
     packageManager: "npm",
-    reporters: ["clear-text", "progress", "html"],
+    reporters: ["clear-text", "progress", "html", "dashboard"],
     testRunner: "mocha",
     transpilers: [],
     testFramework: "mocha",
@@ -16,6 +16,9 @@ module.exports = function(config) {
       high: 90, 
       low: 80, 
       break: 70 
+    },
+    dashboard: {
+      reportType: 'full'
     }
   });
 };
