@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/RobDWaller/rs-jwt.svg?branch=master)](https://travis-ci.org/RobDWaller/rs-jwt) [![codecov](https://codecov.io/gh/RobDWaller/rs-jwt/branch/master/graph/badge.svg)](https://codecov.io/gh/RobDWaller/rs-jwt)
+[![Build Status](https://travis-ci.org/RobDWaller/rs-jwt.svg?branch=master)](https://travis-ci.org/RobDWaller/rs-jwt) [![codecov](https://codecov.io/gh/RobDWaller/rs-jwt/branch/master/graph/badge.svg)](https://codecov.io/gh/RobDWaller/rs-jwt) [![Maintainability](https://api.codeclimate.com/v1/badges/4e718477548d731932a9/maintainability)](https://codeclimate.com/github/RobDWaller/rs-jwt/maintainability)
 # Really Simple JWT JS
 
 RS-JWT is a JSON Web Token reader for the browser which allows you to access the header and payload claims data contained in a JWT. It can be used in any JavaScript or TypeScript project.
