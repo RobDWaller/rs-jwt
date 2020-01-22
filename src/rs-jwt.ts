@@ -9,7 +9,6 @@ import { Jwt } from './jwt'
  * @author Rob Waller <rdwaller1984@gmail.com>
  */
 export class RSJwt {
-
   public parse (token: string): Jwt {
     const split = this.splitToken(token)
 
