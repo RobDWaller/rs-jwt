@@ -1,6 +1,7 @@
 /**
  * Wrapper class which contains the parsed JWT header and payload objects along
- * with the JWT signature string.
+ * with the JWT signature string. This makes it easier for developers to access
+ * the JWT claims.
  */
 export class Jwt {
   private header: object
