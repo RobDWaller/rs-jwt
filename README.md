@@ -3,7 +3,7 @@
 
 RS-JWT is a JSON Web Token reader for the browser which allows you to access the header and payload claims data contained in a JWT. It can be used in any JavaScript or TypeScript project.
 
-It is part of the PHP ReallySimpleJWT family of JSON Web Token tools which help you easily add JWT functionality to your web projects.
+It is part of the [PHP ReallySimpleJWT family](https://github.com/RobDWaller/ReallySimpleJWT) of JSON Web Token tools which help you easily add JWT functionality to your web projects.
 
 - [ReallySimpleJWT](https://github.com/RobDWaller/ReallySimpleJWT): Create and Validate JSON Web Tokens.
 - [PSR-JWT](https://github.com/RobDWaller/psr-jwt): Add JSON Web Token authorisation middleware to a PHP Project. 
