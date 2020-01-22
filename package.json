@@ -20,7 +20,11 @@
     "url": "git+https://github.com/RobDWaller/rs-jwt.git"
   },
   "keywords": [
-    "jwt"
+    "jwt",
+    "json web tokens",
+    "jwt reader",
+    "json",
+    "javascript"
   ],
   "author": "Rob Waller",
   "license": "MIT",
