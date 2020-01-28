@@ -18,12 +18,6 @@ JavaScript:
 npm install --save rs-jwt
 ```
 
-TypeScript:
-
-```sh
-npm install --save @types/rs-jwt
-```
-
 ## Usage
 
 Import the RSJwt class, instantiate it and then call the parse method with a JSON Web Token.
