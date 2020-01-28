@@ -1,12 +1,9 @@
 {
   "name": "rs-jwt",
-  "version": "0.2.0-alpha",
+  "version": "0.2.0-alpha.1",
   "description": "A really simple JSON Web Token reader.",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "files": [
-    "dist/**/*"
-  ],
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "test": "mocha ./tests/**/*.ts",
     "build": "tsc",
@@ -24,7 +21,8 @@
     "json web tokens",
     "jwt reader",
     "json",
-    "javascript"
+    "javascript",
+    "typescript"
   ],
   "author": "Rob Waller",
   "license": "MIT",
@@ -40,7 +38,6 @@
     "@stryker-mutator/typescript": "^2.5.0",
     "@types/chai": "^4.2.7",
     "@types/mocha": "^5.2.7",
-    "@types/node": "^13.5.0",
     "@typescript-eslint/eslint-plugin": "^2.18.0",
     "@typescript-eslint/parser": "^2.18.0",
     "chai": "^4.2.0",
