@@ -21,7 +21,7 @@ export class RSJwt {
 
   /**
    * Split the JWT token string into it's three parts, header, payload
-   * and signature so they can be decode individually.
+   * and signature so they can be decoded individually.
    */
   private splitToken (token: string): SplitToken {
     const parts = token.split('.')
@@ -30,7 +30,7 @@ export class RSJwt {
   }
 
   /**
-   *  Decode JWT token part from a Base64Url string a JSON string.
+   * Decode JWT token part from a Base64Url string a JSON string.
    */
   private decode (base64Url: string): string {
     let base64 = this.toBase64(base64Url)
