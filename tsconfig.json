@@ -1,16 +1,14 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "module": "commonjs",
+    "target": "es6",
+    "lib": ["es6", "dom"],
     "removeComments": true,
     "alwaysStrict": true,
-    "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "noEmitOnError": true,
     "declaration": true,
     "outDir": "./dist",
-    "types": ["node"],
-    "sourceMap": false
+    "sourceMap": true
   },
   "include": [
     "./src/*.ts",
