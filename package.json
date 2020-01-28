@@ -1,9 +1,19 @@
 {
   "name": "rs-jwt",
-  "version": "0.2.0-alpha.1",
+  "version": "0.2.0-alpha.2",
   "description": "A really simple JSON Web Token reader.",
-  "main": "./dist/index.js",
+  "browser": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "files": [
+    "dist/index.d.ts",
+    "dist/index.js",
+    "dist/jwt.d.ts",
+    "dist/jwt.js",
+    "dist/rs-jwt.d.ts",
+    "dist/rs-jwt.js",
+    "dist/split-token.d.ts",
+    "dist/split-token.js"
+  ],
   "scripts": {
     "test": "mocha ./tests/**/*.ts",
     "build": "tsc",
