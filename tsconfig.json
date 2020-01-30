@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "target": "es6",
-    "lib": ["es6", "dom"],
+    "module": "commonjs",
     "removeComments": true,
     "alwaysStrict": true,
     "forceConsistentCasingInFileNames": true,
@@ -10,11 +10,9 @@
     "outDir": "./dist",
     "sourceMap": false
   },
-  "include": [
-    "./src/*.ts",
-    "./src/**/*.ts"
-  ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "tests",
+    "dist"
   ]
 }
