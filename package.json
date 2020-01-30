@@ -1,6 +1,6 @@
 {
   "name": "rs-jwt",
-  "version": "0.2.0-alpha.2",
+  "version": "0.2.0-beta",
   "description": "A really simple JSON Web Token reader.",
   "browser": "./dist/index.js",
   "types": "./dist/index.d.ts",
