@@ -1,7 +1,7 @@
 /**
- * "Value object" returned after the JWT token string is parsed. 
- * Contains the parsed JWT header and payload objects along with the JWT 
- * signature string. This makes it easier for developers to access 
+ * "Value object" returned after the JWT token string is parsed.
+ * Contains the parsed JWT header and payload objects along with the JWT
+ * signature string. This makes it easier for developers to access
  * the JWT claims.
  */
 export class Jwt {

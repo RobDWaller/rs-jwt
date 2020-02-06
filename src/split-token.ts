@@ -1,5 +1,5 @@
 /**
- * "Value Object" returned after the JWT token string is split. Contains the 
+ * "Value Object" returned after the JWT token string is split. Contains the
  * header, payload and signature strings.
  */
 export class SplitToken {
