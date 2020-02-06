@@ -29,7 +29,7 @@ export class RSJwt {
   }
 
   /**
-   * Decode JWT token part from a Base64Url string a JSON string.
+   * Decode JWT token part from a Base64Url string to a JSON string.
    */
   private decode (base64Url: string): string {
     let base64 = this.toBase64(base64Url)

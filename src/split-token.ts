@@ -1,6 +1,6 @@
 /**
- * Wrapper class which contains the header, payload and signature strings once
- * the JWT token string has been split.
+ * "Value Object" returned after the JWT token string is split. Contains the 
+ * header, payload and signature strings.
  */
 export class SplitToken {
   private header: string
