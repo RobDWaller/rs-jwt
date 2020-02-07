@@ -1,11 +1,18 @@
 {
   "name": "rs-jwt",
-  "version": "0.1.0",
+  "version": "0.2.0-rc",
   "description": "A really simple JSON Web Token reader.",
-  "main": "dist/rs-jwt.js",
-  "types": "dist/rs-jwt.d.ts",
+  "browser": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "files": [
-    "dist/**/*"
+    "dist/index.d.ts",
+    "dist/index.js",
+    "dist/jwt.d.ts",
+    "dist/jwt.js",
+    "dist/rs-jwt.d.ts",
+    "dist/rs-jwt.js",
+    "dist/split-token.d.ts",
+    "dist/split-token.js"
   ],
   "scripts": {
     "test": "mocha ./tests/**/*.ts",
@@ -24,7 +31,8 @@
     "json web tokens",
     "jwt reader",
     "json",
-    "javascript"
+    "javascript",
+    "typescript"
   ],
   "author": "Rob Waller",
   "license": "MIT",
@@ -32,29 +40,31 @@
     "url": "https://github.com/RobDWaller/rs-jwt/issues"
   },
   "homepage": "https://github.com/RobDWaller/rs-jwt#readme",
+  "engines": {
+    "node": ">= 10.0.0"
+  },
   "devDependencies": {
-    "@stryker-mutator/core": "^2.4.0",
+    "@stryker-mutator/core": "^2.5.0",
     "@stryker-mutator/html-reporter": "^2.5.0",
-    "@stryker-mutator/mocha-framework": "^2.4.0",
-    "@stryker-mutator/mocha-runner": "^2.4.0",
-    "@stryker-mutator/typescript": "^2.4.0",
+    "@stryker-mutator/mocha-framework": "^2.5.0",
+    "@stryker-mutator/mocha-runner": "^2.5.0",
+    "@stryker-mutator/typescript": "^2.5.0",
     "@types/chai": "^4.2.7",
     "@types/mocha": "^5.2.7",
-    "@types/node": "^13.1.4",
-    "@typescript-eslint/eslint-plugin": "^2.15.0",
-    "@typescript-eslint/parser": "^2.15.0",
+    "@typescript-eslint/eslint-plugin": "^2.18.0",
+    "@typescript-eslint/parser": "^2.18.0",
     "chai": "^4.2.0",
-    "codecov": "^3.6.1",
+    "codecov": "^3.6.2",
     "eslint": "^6.8.0",
     "eslint-config-standard": "^14.1.0",
-    "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-import": "^2.20.0",
     "eslint-plugin-node": "^11.0.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
     "mocha": "^6.2.2",
     "nyc": "^15.0.0",
-    "ts-node": "^8.5.4",
-    "typescript": "^3.7.4"
+    "ts-node": "^8.6.2",
+    "typescript": "^3.7.5"
   },
   "dependencies": {
     "@types/js-base64": "^2.3.1",

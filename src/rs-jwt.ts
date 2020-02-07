@@ -3,10 +3,9 @@ import { SplitToken } from './split-token'
 import { Jwt } from './jwt'
 
 /**
- * Parse a JSON Web Token to a JavaScript object which allows you to easily
- * access claims in the header and payload.
- *
- * @author Rob Waller <rdwaller1984@gmail.com>
+ * Provides the main interface for parsing a JSON Web Token. Includes the
+ * functionality to decode the base64Url JWT parts to readable header and
+ * payload claim objects.
  */
 export class RSJwt {
   public parse (token: string): Jwt {
@@ -30,7 +29,7 @@ export class RSJwt {
   }
 
   /**
-   * Decode JWT token part from a Base64Url string a JSON string.
+   * Decode JWT token part from a Base64Url string to a JSON string.
    */
   private decode (base64Url: string): string {
     let base64 = this.toBase64(base64Url)
